@@ -1,8 +1,9 @@
 from flask import Flask, render_template
 from random import shuffle
+import os
+
 
 app = Flask(__name__)
-
 
 @app.route("/")
 def index():
@@ -20,4 +21,4 @@ def display_image(image_id):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=int(os.environ.get("PORT", 5000)))
