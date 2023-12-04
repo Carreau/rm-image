@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+<style>
+    img {
+        max-width: 200px;
+    }
+</style>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    {% for o in order %}
+    <a href="/image/{{o}}"><img src="/static/images/image{{o}}.jpg" alt="Image {{o}}"></a>
+    {% endfor %}
+</body>
+</html>
